@@ -1,0 +1,13 @@
+<h2>{{title}}</h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <shared-search-box [placeholder]="placeholder" (onSearch)="searchBy($event)"></shared-search-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <hr>
+    <page-table></page-table>
+  </div>
+</div>
