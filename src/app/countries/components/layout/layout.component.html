@@ -1,13 +1,16 @@
-<h2>{{title}}</h2>
-<hr>
-<div class="row">
-  <div class="col">
-    <shared-search-box [placeholder]="placeholder" (onSearch)="searchBy(route, $event)"></shared-search-box>
+<div class="my-4">
+  <h2>{{title}}</h2>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <shared-search-box [placeholder]="placeholder" (onSearch)="searchBy(route, $event)"></shared-search-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <hr>
+      <page-table [countries]="countries"></page-table>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="col">
-    <hr>
-    <page-table [countries]="countries"></page-table>
-  </div>
-</div>
+

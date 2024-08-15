@@ -1,10 +1,27 @@
-<h2>Paises</h2>
-<hr>
-<ul class="list-group">
-  <!-- <li class="list-group-item" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home Page</li>
-  <li class="list-group-item" routerLink="about" routerLinkActive="active">About Page</li>
-  <li class="list-group-item" routerLink="contact" routerLinkActive="active">Contact Page</li> -->
-  <li class="list-group-item" routerLink="countries/by-capital" routerLinkActive="active">By Capital</li>
-  <li class="list-group-item" routerLink="countries/by-country" routerLinkActive="active">By Country</li>
-  <li class="list-group-item" routerLink="countries/by-region" routerLinkActive="active">By Region</li>
-</ul>
+<div class="my-4">
+  <h2>Countries</h2>
+  <hr>
+  <!-- <ul class="list-group">
+    <li class="list-group-item" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home Page</li>
+    <li class="list-group-item" routerLink="about" routerLinkActive="active">About Page</li>
+    <li class="list-group-item" routerLink="contact" routerLinkActive="active">Contact Page</li>
+  </ul> -->
+  <div class="dropdown open">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="triggerId"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Search
+    </button>
+    <div class="dropdown-menu" aria-labelledby="triggerId">
+      <button class="dropdown-item" routerLink="countries/by-capital" routerLinkActive="active">By Capital</button>
+      <button class="dropdown-item" routerLink="countries/by-country" routerLinkActive="active">By Country</button>
+      <button class="dropdown-item" routerLink="countries/by-region" routerLinkActive="active">By Region</button>
+    </div>
+  </div>
+
+</div>
