@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class ByCapitalPageComponent {
   public pagePlaceholder: string = 'Search by Capital';
   public pageTitle: string = 'By Capital';
+  public pageRoute: string = 'capital';
 }

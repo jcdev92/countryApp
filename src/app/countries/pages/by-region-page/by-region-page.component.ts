@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class ByRegionPageComponent {
   public pagePlaceholder: string = 'Search by Region';
   public pageTitle: string = 'By Region';
+  public pageRoute: string = 'region';
 }

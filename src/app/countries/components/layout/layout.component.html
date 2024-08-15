@@ -2,12 +2,12 @@
 <hr>
 <div class="row">
   <div class="col">
-    <shared-search-box [placeholder]="placeholder" (onSearch)="searchBy($event)"></shared-search-box>
+    <shared-search-box [placeholder]="placeholder" (onSearch)="searchBy(route, $event)"></shared-search-box>
   </div>
 </div>
 <div class="row">
   <div class="col">
     <hr>
-    <page-table></page-table>
+    <page-table [countries]="countries"></page-table>
   </div>
 </div>

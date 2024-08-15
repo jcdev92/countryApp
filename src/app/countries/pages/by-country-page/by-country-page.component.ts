@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class ByCountryPageComponent {
   public pagePlaceholder: string = 'Search by Country';
   public pageTitle: string = 'By Country';
+  public routePage: string = 'name';
 
 }
