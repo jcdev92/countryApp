@@ -12,13 +12,15 @@ export class LayoutComponent {
   @Input() title: string = "";
   @Input() placeholder: string = "";
   @Input() route: string = "";
+  isLoading: boolean = false;
 
   public countries: Country[] = [];
 
   constructor(private countriesService: CountriesService) { }
 
   searchBy(route:string, term: string):void {
+    this.isLoading = true;
     this.countriesService.searchCountries(route, term)
-    .pipe( map( countries => Array.isArray(countries) ? countries: [] )).subscribe( countries => { this.countries = countries; });
+    .pipe( map( countries => Array.isArray(countries) ? countries: [] )).subscribe( countries => { this.countries = countries; this.isLoading = false; });
     }
 }

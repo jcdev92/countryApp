@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class ByCapitalPageComponent {
-  public pagePlaceholder: string = 'Search by Capital';
-  public pageTitle: string = 'By Capital';
+  public pagePlaceholder: string = 'Search country by capital name';
+  public pageTitle: string = 'Capital';
   public pageRoute: string = 'capital';
 }

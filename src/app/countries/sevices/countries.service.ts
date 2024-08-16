@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, of, map } from 'rxjs';
+import { catchError, Observable, of, map, delay } from 'rxjs';
 import { Country } from '../interfaces/countries';
 
 @Injectable({providedIn: 'root'})
@@ -18,7 +18,8 @@ export class CountriesService {
           }
           return countries;
         } ),
-        catchError(() => of(null))
+        catchError(() => of(null)),
+        delay(1000)
       );
   }
 

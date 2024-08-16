@@ -1,5 +1,5 @@
 <ng-template #loading>
-  <div class="alert alert-info text-center">Espere por favor</div>
+  <shared-loading-spinner></shared-loading-spinner>
 </ng-template>
 
 <div *ngIf="country; else loading">
@@ -8,6 +8,7 @@
       <h2 class="text-center">
         <strong>{{ country.name.common }}</strong>
       </h2>
+      <hr>
     </div>
   </div>
   <div class="row my-4">

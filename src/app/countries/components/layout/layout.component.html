@@ -9,6 +9,7 @@
   <div class="row">
     <div class="col">
       <hr>
+      <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
       <page-table [countries]="countries"></page-table>
     </div>
   </div>

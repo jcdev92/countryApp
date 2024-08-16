@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class ByCountryPageComponent {
-  public pagePlaceholder: string = 'Search by Country';
-  public pageTitle: string = 'By Country';
-  public routePage: string = 'name';
+  public pagePlaceholder: string = 'Search country by name';
+  public pageTitle: string = 'Country';
+  public pageRoute: string = 'name';
 
 }
