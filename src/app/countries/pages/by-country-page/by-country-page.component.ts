@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RoutesType } from '../../interfaces/Route.type';
 
 @Component({
   selector: 'app-by-country-page',
@@ -8,6 +9,6 @@ import { Component } from '@angular/core';
 export class ByCountryPageComponent {
   public pagePlaceholder: string = 'Search country by name';
   public pageTitle: string = 'Country';
-  public pageRoute: string = 'name';
+  public pageRoute: RoutesType = 'name';
 
 }

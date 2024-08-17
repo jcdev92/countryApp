@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Region } from '../../interfaces/Region.type';
+import { RoutesType } from '../../interfaces/Route.type';
+
 
 @Component({
   selector: 'app-by-region-page',
@@ -8,5 +11,12 @@ import { Component } from '@angular/core';
 export class ByRegionPageComponent {
   public pagePlaceholder: string = 'Search country by region name';
   public pageTitle: string = 'Region';
-  public pageRoute: string = 'region';
+  public pageRoute: RoutesType = 'region';
+  public regions: Region[] = [
+    'Africa',
+    'Americas',
+    'Asia',
+    'Europe',
+    'Oceania'
+  ];
 }

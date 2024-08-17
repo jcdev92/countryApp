@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RoutesType } from '../../interfaces/Route.type';
 
 @Component({
   selector: 'app-by-capital-page',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
 export class ByCapitalPageComponent {
   public pagePlaceholder: string = 'Search country by capital name';
   public pageTitle: string = 'Capital';
-  public pageRoute: string = 'capital';
+  public pageRoute: RoutesType = 'capital';
 }
