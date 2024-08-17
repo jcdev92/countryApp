@@ -25,7 +25,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
     if (this.route === 'region') {
       this.countries = this.countriesService.cacheStore.byRegion.countries
-      this.initialValue = this.countriesService.cacheStore.byRegion.region;
+      this.selectedRegion = this.countriesService.cacheStore.byRegion.region;
     }
     if (this.route === 'name') {
       this.countries = this.countriesService.cacheStore.byCountries.countries

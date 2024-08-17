@@ -15,7 +15,19 @@ export class CountriesService {
     byRegion: { region: '', countries: [] },
   };
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+    this.loadFromLocalStorage();
+  }
+
+  private saveToLocalStorage(): void {
+    localStorage.setItem('cacheStore', JSON.stringify(this.cacheStore));
+  }
+
+  private loadFromLocalStorage(): void {
+    const cacheStore = localStorage.getItem('cacheStore');
+    if (!cacheStore) return;
+    this.cacheStore = JSON.parse(cacheStore);
+  }
 
   searchCountries(route: string, term: string): Observable<Country[] | Country | null> {
     const url = `${this.apiUrl}/${route}/${term}`;
@@ -36,7 +48,8 @@ export class CountriesService {
           } else if (route === 'region') {
             this.cacheStore.byRegion = { region: term as Region, countries: countries as Country[] };
           }
-        })
+        }),
+        tap(() => this.saveToLocalStorage())
       );
   }
 
